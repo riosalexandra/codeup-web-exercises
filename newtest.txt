@@ -1,0 +1,111 @@
+var a = 1;
+var b = a++;
+var c = ++a;
+undefined
+c
+3
+var d = "hello";
+var e = false;
+
+d++;
+e++;
+0
+var perplexed;
+undefined
+var perplexed;
+perplexed + 2;
+NaN
+var price = 2.7;
+price.toFixed(2);
+
+
+'2.70'
+var price = "2.7";
+price.toFixed(2);
+VM1223:2 Uncaught TypeError: price.toFixed is not a function
+    at <anonymous>:2:7
+(anonymous) @ VM1223:2
+isNaN(0)
+
+isNaN(1)
+
+isNaN("")
+
+isNaN("string")
+
+isNaN("0")
+
+isNaN("1")
+
+isNaN("3.145")
+
+isNaN(Number.MAX_VALUE)
+
+isNaN(Infinity)
+
+isNaN("true")
+
+isNaN(true)
+
+isNaN("false")
+
+isNaN(false)
+
+NaN !== NaN
+true
+isNaN(Infinity)
+false
+!true!
+VM1313:1 Uncaught SyntaxError: Unexpected token '!'
+!!true
+true
+!!false
+false
+0
+0
+!!"hello"
+true
+var sample = "Hello Codeup";
+undefined
+.length
+VM1574:1 Uncaught SyntaxError: Unexpected token '.'
+.length(var sample = "Hello Codeup")
+VM1706:1 Uncaught SyntaxError: Unexpected token '.'
+.length(var)
+VM1747:1 Uncaught SyntaxError: Unexpected token '.'
+var sample = "Hello Codeup";
+undefined
+var sample .length
+VM1893:1 Uncaught SyntaxError: Unexpected token '.'
+sample.length
+12
+sample.toUpperCase
+ƒ toUpperCase() { [native code] }
+var sample.toUpperCase
+VM2035:1 Uncaught SyntaxError: Unexpected token '.'
+.toUpperCase(sample)
+VM2129:1 Uncaught SyntaxError: Unexpected token '.'
+toUpperCase(var)
+
+VM2169:1 Uncaught SyntaxError: Unexpected token 'var'
+toUpperCase(var sample)
+
+VM2188:1 Uncaught SyntaxError: Unexpected token 'var'
+.toUpperCase(var sample)
+
+VM2221:1 Uncaught SyntaxError: Unexpected token '.'
+sample.toUpperCase();
+'HELLO CODEUP'
+sample.toLowerCase();
+'hello codeup'
+sample.replace("Students", "class")
+'Hello Codeup'
+var sample1 = sample ' Hello Codeup Students '
+VM2668:1 Uncaught SyntaxError: Unexpected string
+sample + students
+VM2705:1 Uncaught ReferenceError: students is not defined
+    at <anonymous>:1:10
+(anonymous) @ VM2705:1
+sample = sample + " Students "
+'Hello Codeup Students '
+
