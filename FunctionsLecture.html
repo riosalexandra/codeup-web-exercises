@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions Lecture</title>
+</head>
+<body>
+
+<script>
+
+    "use strict";
+
+
+    // ================ !! Mini-exercises !!
+
+    // Write a function, returnFive, that returns the number five. No inputs should be defined.
+
+             function returnFive(){
+              return 5;
+             }
+
+         //how to check if it works correctly ^^^?
+             console.log(returnFive())
+
+
+    // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is the number 5 or the string "5". Return false otherwise.
+
+    //how many inputs should a function have? answer: 1
+    //what are the data types for the inputs? answer: any data type
+    //what is the data type of the output/return value? answer: boolean
+
+    function isFive(input)  {
+                 return input == 5;
+
+    }
+    //alternative possible solution
+    function isFive(input)  {
+        return input === 5 || input === '5';
+
+    }
+
+    console.log(isFive('5'), true);
+    console.log(isFive(5), true);
+    console.log(isFive("zzz"), false);
+    console.log(isFive(33), false);
+             //test it out?^
+
+    // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument is shorter than 5 characters. Return false otherwise.
+
+    //how many inputs? answer: 1
+    //type of inputs? answer: string
+    //what is the return type? answer: boolean (true or false)
+
+    function isShortWord(stringInput) {
+        return stringInput.length < 5;
+
+    }
+
+    //test is out
+    console.log(isShortWord("password"), false);
+    console.log(isShortWord("five"), true);
+    console.log(isShortWord(" "), true);
+    console.log(isShortWord("aaaaa"), false);
+
+
+    // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
+    function isSameLength(str1, str2) {
+        //create variable to store boolean comparing strings
+        //return variable output
+        // var strsAreSameLength = str1.length === str2.length;
+        //return variable output
+        // return strsAreSameLength;
+
+        return str1.length === str2.length;
+    }
+
+    // example inputs/outputs
+
+    console.log(isSameLength("cat", "hat"), true);
+    console.log(isSameLength("dog", "plane"), false);
+    console.log(isSameLength("plane", "dog"), false);
+    console.log(isSameLength("   ", "dog"), true);
+    console.log(isSameLength("   ", "   "), true);
+
+
+    // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
+
+    // example input: getSmallerSegment("Codeup", 3)
+    // example output: "cod"
+
+// getSmallerSegment('dog', 1) // return 'd'
+    // getSmallerSegment ('Hello', 2) // return "he"
+
+
+    //how many inputs? 2
+    //what type of inputs? string and number
+    //type of output? string
+
+    function getSmallerSegment(str, segmentLength){
+        return str.substring(0, segmentLength).toLowerCase();
+    }
+
+//Test expectations w input/output
+    console.log(getSmallerSegment("Codeup", 3), "cod");
+    console.log(getSmallerSegment('dog', 1), "d");
+    console.log(getSmallerSegment ('Hello', 2), "h");
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
