@@ -26,10 +26,23 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(color) {
-    return "message related " + color
-}
-console.log(analyzeColor("color"))
+    function analyzeColor(color) {
+        // return "message related " + color
+
+        if (color === "Purple".toLowerCase()) {
+            return ("Barney is the color " + color);
+        } else if (color === "Blue") {
+            return ("The sky is the color " + color);
+        } else {
+            return (color + " is one of the colors of the rainbow also!")
+        }
+    }
+
+    var declaredColor = prompt("Please pick a color: \n1. Purple \n2. Blue");
+
+    console.log(analyzeColor(declaredColor))
+
+
 
 
 // Don't change the next two lines!
@@ -44,6 +57,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
+console.log(analyzeColor(randomColor));
+
 
 /**
  * TODO:
