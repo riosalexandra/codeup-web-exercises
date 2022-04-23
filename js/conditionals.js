@@ -58,7 +58,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-console.log(analyzeColor(randomColor));
+// console.log(analyzeColor(randomColor));
 
 
 /**
@@ -66,12 +66,34 @@ console.log(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
+function analyzeColor(strColorName) {
+    switch (strColorName.toLowerCase()) {
+        case "red":
+            return "Red like a STOP sign"
+    //    alert("Red like a STOP sign.");
+    //        break;
+        case "yellow":
+          return "Yellow like Curious George.";
+    //      alert("Yellow like Curious George.");
+    //        break
+        default:
+            return "It looks like " + str.ColorName.toLowerCase() + " is a new color for me."
+    //    aler(""It looks like " + str.ColorName.toLowerCase() + " is a new color for me.");
+
+    }
+}
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+var userColorInput = prompt("Pick a color please :)");
+var responseMessage = analyzeCOlor(userColorInput);
+alert(responseMessage);
+//analyzeColor(prompt("Pick a color please :)") );
 
 /* ########################################################################## */
 
@@ -95,6 +117,25 @@ console.log(analyzeColor(randomColor));
  * return value.
  */
 
+function calculateTotal(luckyNumber, totalAmount) {
+    switch (luckyNumber) {
+        case 0:
+            return totalAmount;
+        case 1:
+            return totalAmount - totalAmount * .1;
+        case 2:
+            return totalAmount - totalAmount * .25;
+        case 3:
+            return totalAmount - totalAmount * .35;
+        case 4:
+            return totalAmount - totalAmount * .5;
+        case 5:
+            return 0;
+        // return totalAmount - totalAmount * 1;
+    }
+}
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -104,7 +145,13 @@ console.log(analyzeColor(randomColor));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var customerTotalBill = (prompt("You made a purchase at Walmart, what was your total?"));
+var disPrice = calculateTotal(luckyNumber, customerTotalBill);
+alert("Lucky number: " + luckyNumber + "! Your total was: $" + customerTotalBill + ". New total with discount: $" + disPrice + "!");
+
+
+
 
 /**
  * TODO:
@@ -126,6 +173,28 @@ console.log(analyzeColor(randomColor));
  */
 
 
+function isEvenNumber(number){
+    if(number === 0){
+        alert(number + " isn't even or odd.")
+    } else (number % 2 === 0) ? alert(number + " is an even number.") : alert(number + " is an odd number.");
+}
+    function isPositiveNumber(number){
+        if(number === 0){
+            alert(number + " isn't positive or negative")
+        } else (number > 0) ? alert(number + " is a positive number.") : alert(number + " is a negative number");
+    }
+    function numberPlusOneHundred(number){
+        alert((number + 100) + " is the value of " + number + " plus 100.")
+    }
+    var isConfirmed = confirm("Please enter a number.");
+    if (isConfirmed) {
+        var capturedNumber = parseFloat(prompt("Enter a digit. (Please use number keys)"));
+        isEvenNumber(capturedNumber);
+        isPositiveNumber(capturedNumber);
+        numberPlusOneHundred(capturedNumber);
+    } else {
+        alert("Incorrect input data entered.");
+    }
 
 
 
