@@ -60,7 +60,7 @@ fieldset {
     background-color: #0fb784;
     font-weight: bold;
     color: white;
-    border-width: 1px lightgray;
+    border: 1px solid black;
     padding: 8px;
 }
 
