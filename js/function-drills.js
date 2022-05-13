@@ -7,10 +7,31 @@
 //     Functions using conditionals but not loops or arrays:
 //
 //         Make a function named isOdd(number)
+    function isOdd(number) {
+        return "number";
+    }
+
 //     Make a function named isEven(number)
+    function isEven(number) {
+        return 'number';
+    }
+    
 //     Make a function named identity(input) that returns the input exactly as provided.
+    function identity(input) {
+        return input;
+    }
+    
 //         Make a function named isFive(input)
+    function isFive(input) {
+        return === 5;
+    }
+    
+    
 //     Make a function named addFive(input) that adds five to some input.
+    function addFive(input) {
+        return input + 5; 
+    }
+    
 //         Make a function named isMultipleOfFive(input)
 //     Make a function named isThree(input)
 //     Make a function named isMultipleOfThree(input)
