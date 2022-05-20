@@ -1,0 +1,5 @@
+const MAPBOX_API_TOKEN = 
+
+
+    const OPEN_WEATHER_APPID = 'da760f38a774334fe3c5fe625dba95c1';
+
