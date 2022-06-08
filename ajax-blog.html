@@ -5,7 +5,20 @@
     <title>Ajax Blog</title>
 </head>
 <body>
-
+    <div id="posts"></div>
 
 </body>
+
+<script src="js/jquery-3.6.0.js"></script>
+<script>
+    $.get('/data/blog.json').done(function(data){
+        data.forEach(function(post){
+            $("#posts").append(
+                "<h2>" + post.title + "</h2>" +
+                "<p>" + post.content + "</p>" + "<p>" + post.categories.join (', ') + "</p>" + "<p" +
+                post.date + "</p>"
+            );
+        });
+    });
+</script>
 </html>
